@@ -1,224 +1,335 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 
-<html>
+<html lang="en" dir="ltr">
 
 <head>
 
-<title>Ass2 Form</title>
+<meta charset="utf-8">
 
-<style>
+<title>Mock Login page</title>
 
-form
-
-{
-
-width:600px;
-
-margin:0 auto;
-
-justify-content:center;
-
-background-color:#f2f2f2;
-
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 0 10px rgba(0,0,0,0.3);
-
-}
-
-input[type=text],
-
-input[type=password],
-
-input[type=number],
-
-input[type=file],
-
-input[type=email],
-
-input[type=url]
-
-}
-
-display:block;
-
-width:96%;
-
-padding:10px;
-
-margin-bottom:20px;
-
-border:none;
-
-border-radius:5px;
-
-box-shadow:0 0 5px rgba(0,0,0,0.1);
-
-background-color:#fff;
-
-font-size:16px;
-
-line-height:1.5;
-
-}
-
-input[type=range]
-
-{
-
-display:block;
-
-width:100%;
-
-padding:0;
-
-margin-bottom:20px;
-
--webkit-appearance:none;
-
-background-color:#fff;
-
-}
-
-input[type=range]::-webkit-slider-thumb
-
-{
-
--webkit-appearance:none;
-
-width:20px;
-
-height:20px;
-
-border-radius:50%;
-
-background-color:#4CAF50;
-
-cursor:pointer;
-
-}
-
-input[type=submit],input[type=reset]
-
-{
-
-display:inline-block;
-
-background-color:#4CAF50;
-
-color:#fff;
-
-border:none;
-
-border-radius:5px;
-
-padding:10px;
-
-cursor:pointer;
-
-font-size:16px;
-
-line-height:1.5;
-
-transition:background-color 0.2s ease;
-
-}
-
-input[type=submit]:hover,input[type=reset]:hover
-
-{
-
-background-color:#2E8B57;
-
-}
-
-label
-
-{
-
-display:block;
-
-font-weight:bold;
-
-margin-bottom:10px;
-
-}
-
-h2
-
-{
-
-font-size:30px;
-
-color:#4CAF50;
-
-text-align:center;
-
-margin-top:0 auto;
-
-}
-
-</style>
+<link rel="stylesheet"href="loginstyle.css">
 
 </head>
 
 <body>
 
-<h2>Registration Form</h2>
+<div class="login-box">
+
+<h2>Login</h2>
 
 <form>
 
-<label for="name">Name:</label>
+<div class="user-box">
 
-<input type="text" id="name"name="name"
+<input type="text" class="loginput" required="">
 
-placeholder="Enter your name" required>
+<label>Username</label>
 
-<label for="password">Password:</label>
+</div>
 
-<input type="password" id="password"name="password"
+<div class="user-box">
 
-placeholder="Enter your name" required>
+<input type="password" class="loginput" required="">
 
-<label for="cpassword">confirm password:</label>
+<label>Password</label>
 
-<input type="password" id="cpassword"name="cpassword"
+</div>
 
-placeholder="confirm password">
+<a href="#">
 
-<label for="number">Contact number:</label>
+<span></span>
 
-<input type="number" id="number" name="number"
+<span></span>
 
-placeholder="Enter your Contact number" min="1000000000" max="9999999999">
+<span></span>
 
-<label for="range">Skill range:</label>
+<span></span>
 
-<input type="range" id="range" name="range" min="0" max="10" value="50">
+SUBMIT
 
-<label for="email">Email:</label>
-
-<input type="email" id="email" name="email" placeholder="Enter your email">
-
-<label for="url">Profit url:</label>
-
-<input type="url" id="url" name="url"placeholder="Enter your profile url">
-
-<label for="file">Resume:</label>
-
-<input type="file" id="file" name="file">
-
-<center>
-
-<input type="submit" value="submit">
-
-<input type="reset" value="reset"></center>
+</a>
 
 </form>
+
+</div>
 
 </body>
 
 </html>
 
+CSS CODE (Loginstyle.css):
+
+body {
+
+font-family: sans-serif;
+
+background:#1c3462;
+
+}
+
+.login-box {
+
+margin: 100px auto;
+
+width: 400px;
+
+padding: 40px;
+
+background: rgba(0, 0, 0, 0.5);
+
+box-shadow: 0 15px 25px rgba(0,0,0,.6);
+
+border-radius: 10px;
+
+}
+
+.login-box h2 {
+
+color: #fff;
+
+text-align: center;
+
+}
+
+.login-box .user-box {
+
+position: relative;
+
+}
+
+input {
+
+width: 100%;
+
+padding: 10px 5px;
+
+font-size: 18px;
+
+color: #fff;
+
+margin-bottom: 30px;
+
+border: none;
+
+border-bottom: 1px solid #fff;
+
+outline: none;
+
+background: transparent;
+
+}
+
+label {
+
+position: absolute; /* position inside another container
+
+using top,bottom,left */
+
+top:0;
+
+padding: 10px 0;
+
+font-size: 18px;
+
+color: #fff;
+
+pointer-events: none;
+
+transition: 0.5s;
+
+}
+
+.loginput:focus ~ label,
+
+.loginput:valid ~ label {
+
+top: -25px;
+
+color: #03e9f4;
+
+font-size: 14px;
+
+}
+
+a {
+
+position: relative;
+
+display: inline-block;
+
+padding: 15px 25px;
+
+color: #03e9f4;
+
+font-size: 18px;
+
+text-decoration: none;
+
+overflow: hidden;
+
+margin-top: 40px;
+
+letter-spacing: 4px;
+
+transition: 0.5s;
+
+}
+
+a:hover {
+
+background: #03e9f4;
+
+color: #fff;
+
+border-radius: 5px;
+
+box-shadow: 0 0 25px #03e9f4,
+
+0 0 50px #03e9f4,
+
+0 0 75px #03e9f4,
+
+0 0 100px #03e9f4;
+
+}
+
+a span {
+
+position: absolute;
+
+}
+
+a span:nth-child(1) {
+
+top: 0;
+
+left: -100%;
+
+width: 100%;
+
+height: 2px;
+
+background: #03e9f4;
+
+animation: btn-anim1 1s linear infinite;
+
+}
+
+@keyframes btn-anim1 {
+
+0% {
+
+left: -100%;
+
+}
+
+50%,100% {
+
+left: 100%;
+
+}
+
+}
+
+a span:nth-child(2) {
+
+right: 0;
+
+top: -100%;
+
+height: 100%;
+
+width: 2px;
+
+background: #03e9f4;
+
+animation: btn-anim2 1s linear infinite;
+
+animation-delay: 0.25s;
+
+}
+
+@keyframes btn-anim2 {
+
+0% {
+
+top: -100%;
+
+}
+
+50%,100% {
+
+top: 100%;
+
+}
+
+}
+
+a span:nth-child(3) {
+
+bottom: 0;
+
+right: -100%;
+
+width: 100%;
+
+height: 2px;
+
+background: #03e9f4;
+
+animation: btn-anim3 1s linear infinite;
+
+animation-delay: 0.50s;
+
+}
+
+@keyframes btn-anim3 {
+
+0% {
+
+right: -100%;
+
+}
+
+50%,100% {
+
+right: 100%;
+
+}
+
+}
+
+a span:nth-child(4) {
+
+left: 0;
+
+bottom: -100%;
+
+height: 100%;
+
+width: 2px;
+
+background: #03e9f4;
+
+animation: btn-anim4 1s linear infinite;
+
+animation-delay: 0.75s;
+
+}
+
+@keyframes btn-anim4 {
+
+0% {
+
+bottom: -100%;
+
+}
+
+50%,100% {
+
+bottom: 100%;
+
+}
+
+}
